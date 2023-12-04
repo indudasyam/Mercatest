@@ -23,7 +23,7 @@ public class AddItemsPage extends Hooks {
             double dressPricesDouble = Double.parseDouble(eachItemPrice);
             itemPriceList.add(dressPricesDouble);
         }
-         highestPrice = Collections.min(itemPriceList);
+         highestPrice = Collections.max(itemPriceList);
         int indexOfHighest = itemPriceList.indexOf(highestPrice);
         int k = indexOfHighest+1; //1 denotes the start index li number on the webpage, unlike the index of the dressprice list which starts from 0
         driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div/div/div"+"["+k+"]"+"/div[2]/div[2]/button")).click();
